@@ -1,7 +1,7 @@
 {
   "name": "aws-lambda-pres",
   "version": "0.0.1",
-  "homepage": "",
+  "homepage": "http://ams-lambda-pres.s3-website-us-east-1.amazonaws.com/",
   "main": "js/reveal.js",
   "scripts": {
     "test": "grunt test",

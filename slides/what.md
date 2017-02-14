@@ -49,9 +49,6 @@ It's the smallest possible unit of infrastructure: A single function.
 
 ### Amazon Linux
 
-- Based on Redhat.
-<!-- .element: class="fragment" -->
-
 - Node v4.x
 <!-- .element: class="fragment" -->
 
