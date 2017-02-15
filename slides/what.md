@@ -8,6 +8,9 @@ exports.handler = (event, context, callback) => {
 <!-- .element: class="fragment" -->
 
 
+## microservices on crack
+
+
 ## Function as a service
 It's the smallest possible unit of infrastructure: A single function.
 <!-- .element: class="fragment" -->
@@ -81,3 +84,20 @@ It's the smallest possible unit of infrastructure: A single function.
 
 3. Provide a link to a ZIP file in a S3 bucket.
 <!-- .element: class="fragment" -->
+
+
+### Price?
+💸💸💸💸
+
+- The Lambda free tier includes 1M free requests per month and 400,000 GB-seconds of compute time (for the smallest memory size) per month.
+<!-- .element: class="fragment" -->
+
+- The Lambda free tier does not automatically expire at the end of your 12 month AWS Free Tier term.
+<!-- .element: class="fragment" -->
+
+
+### Other platforms?
+
+- Openwhisk - http://openwhisk.org
+- Azure Functions - https://azure.microsoft.com/en-us/services/functions/
+- Cloud Functions - https://cloud.google.com/functions/

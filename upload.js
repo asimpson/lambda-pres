@@ -23,7 +23,7 @@ const upload = () => {
     const Body = fs.readFileSync(x);
     const params = {
       Body,
-      Bucket: 'ams-lambda-pres',
+      Bucket: 'lambda-talk.adamsimpson.net',
       ACL: 'public-read',
       ContentType: type(x),
       Key: x,

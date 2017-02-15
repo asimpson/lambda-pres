@@ -3,4 +3,4 @@
 
 
 ### Slides
-[http://modern-javascript.buildright.io](http://modern-javascript.buildright.io)
+[http://lambda-talk.adamsimpson.net](http://lambda-talk.adamsimpson.net)
