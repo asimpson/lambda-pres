@@ -9,3 +9,11 @@ Apex README
 
 ## Go over budget
 Set memory and execution time higher than you think and dial it back once your lambda matures. Note: you are only billed for the time you use.
+
+
+## Test locally
+Test locally as much as you can! The feedback loop of write, zip, upload, test, fail really sucks.
+
+
+## Automate all the things
+The AWS Control Panel is functional but awful. The aws-sdk and aws-cli are incredible.

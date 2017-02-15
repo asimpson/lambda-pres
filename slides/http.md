@@ -53,3 +53,110 @@ d" data-reactid=".1ew6juojny8.2.2"></div></div>
     callback(null, template);
 };
 ```
+
+
+## Demo
+
+✨ https://github.com/asimpson/lam-emoji-demo
+
+
+Lambda
+```javascript
+'use strict'
+
+const fetch = require('isomorphic-fetch');
+
+const emoji = (event, context, cb) => {
+  fetch('http://emoji.getdango.com/api/emoji?q=${event.emoji}').then((x) => {
+    return x.json();
+  }).then((resp) => {
+    const emojiResponse = resp.results[0].text;
+    cb(null, JSON.stringify(emojiResponse));
+  });
+};
+
+exports.handler = emoji;
+```
+
+
+API Gateway Swagger JSON
+```json
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "2017-02-15T15:29:49Z",
+    "title": "emoji-demo"
+  },
+  "host": "ld3uf7y63f.execute-api.us-east-1.amazonaws.com",
+  "basePath": "/prod",
+  "schemes": [
+    "https"
+  ],
+  "paths": {
+    "/{emoji}": {
+      "get": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "emoji",
+            "in": "path",
+            "required": true,
+            "type": "string"
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            }
+          }
+        }
+      },
+      "options": {
+        "consumes": [
+          "application/json"
+        ],
+        "produces": [
+          "application/json"
+        ],
+        "responses": {
+          "200": {
+            "description": "200 response",
+            "schema": {
+              "$ref": "#/definitions/Empty"
+            },
+            "headers": {
+              "Access-Control-Allow-Origin": {
+                "type": "string"
+              },
+              "Access-Control-Allow-Methods": {
+                "type": "string"
+              },
+              "Access-Control-Allow-Headers": {
+                "type": "string"
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Empty": {
+      "type": "object",
+      "title": "Empty Schema"
+    }
+  }
+}
+```
+
+
+Use it
+
+`curl https://ld3uf7y63f.execute-api.us-east-1.amazonaws.com/prod/coffee` => ☕
